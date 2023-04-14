@@ -1,6 +1,5 @@
 package tests.day01_TestNGFramework;
 
-import org.apache.commons.lang3.builder.ToStringExclude;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -8,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.Driver;
 
-public class C03_NutellaTesti {
+public class C04_NutellaTesti {
     @Test
     public void test01() {
         //amazon ansayfaya gidin
