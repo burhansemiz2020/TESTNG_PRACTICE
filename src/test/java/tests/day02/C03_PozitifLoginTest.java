@@ -1,4 +1,4 @@
-package tests.day01_TestNGFramework;
+package tests.day02;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,14 +6,14 @@ import pages.QualitydemyPage;
 import pages.QualitydemyPage;
 import utilities.Driver;
 
-public class C05_POMIlkTest {
+public class C03_PozitifLoginTest {
     /*
-    Page object model javadaki OOP konsepte dayanir. Ornegin
-    1. driver classindan webdriver olusturup kullanmak icin static
-    yontemi kullaniriz
-    2. Locate leri page sayfalarinda yapip, onlara obje
-    olusturarak ulasabiliriz.
-     */
+   Page object model javadaki OOP konsepte dayanir. Ornegin
+   1. driver classindan webdriver olusturup kullanmak icin static
+   yontemi kullaniriz
+   2. Locate leri page sayfalarinda yapip, onlara obje
+   olusturarak ulasabiliriz.
+    */
     @Test
     public void test01(){
         //qualitydemy sayfasina gidip
