@@ -1,64 +1,61 @@
-package tests.day02;
+package tests.day03;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.AmazonPage;
 import pages.QualitydemyPage;
+import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class C04_NegativeLoginTest {
+public class C02_NegativeLoginTesti {
     // 3 test method'u olusturun
     // 1.de yanlis email, dogru sifre
     // 2.de dogru email yanlis sifre
     // 3.de yanlis email, yanlis sifre ile giris yapmayi deneyin
     // giris yapilamadigini test edin
-    QualitydemyPage qualitydemyPage= new QualitydemyPage();
-
+    QualitydemyPage qualitydemyPage=new QualitydemyPage();
     @Test
     public void yanlisEmailTesti() throws InterruptedException {
-
-        ReusableMethods.wait(3);
-
-        qualitydemyPage= new QualitydemyPage();
-        Driver.getDriver().get("https://www.qualitydemy.com/");
+        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qualitydemyPage.firstLoginLink.click();
-        qualitydemyPage.emailBox.sendKeys("mehmet@abc.com");
-        qualitydemyPage.passwordBox.sendKeys("Nevzat152032");
-        ReusableMethods.wait(2);
+        qualitydemyPage.emailBox.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
+        qualitydemyPage.passwordBox.sendKeys(ConfigReader.getProperty("qdGecerliPassword"));
         qualitydemyPage.cookiesAcceptButton.click();
         ReusableMethods.wait(2);
         qualitydemyPage.loginButton.click();
-        Assert.assertTrue(qualitydemyPage.userEnterBlock.isDisplayed());
+        Assert.assertTrue(qualitydemyPage.emailBox.isDisplayed());
+        ReusableMethods.wait(2);
         Driver.closeDriver();
+
     }
     @Test
     public void yanlisPasswordTesti() throws InterruptedException {
-        ReusableMethods.wait(1);
-        Driver.getDriver().get("https://www.qualitydemy.com/");
-        qualitydemyPage= new QualitydemyPage();
+        qualitydemyPage=new QualitydemyPage();
+        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qualitydemyPage.firstLoginLink.click();
-        qualitydemyPage.emailBox.sendKeys("anevzatcelik@gmail.com");
-        qualitydemyPage.passwordBox.sendKeys("123456");
-        ReusableMethods.wait(2);
+        qualitydemyPage.emailBox.sendKeys(ConfigReader.getProperty("qdGecerliUserName"));
+        qualitydemyPage.passwordBox.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
         qualitydemyPage.cookiesAcceptButton.click();
         ReusableMethods.wait(2);
         qualitydemyPage.loginButton.click();
         Assert.assertTrue(qualitydemyPage.emailBox.isDisplayed());
+        ReusableMethods.wait(2);
         Driver.closeDriver();
+
     }
     @Test
     public void yanlisEmailYanlisPasswordTesti() throws InterruptedException {
-        ReusableMethods.wait(1);
-        Driver.getDriver().get("https://www.qualitydemy.com/");
-        qualitydemyPage= new QualitydemyPage();
+        qualitydemyPage=new QualitydemyPage();
+        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         qualitydemyPage.firstLoginLink.click();
-        qualitydemyPage.emailBox.sendKeys("mehmet@abc.com");
-        qualitydemyPage.passwordBox.sendKeys("123456");
-        ReusableMethods.wait(2);
+        qualitydemyPage.emailBox.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
+        qualitydemyPage.passwordBox.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
         qualitydemyPage.cookiesAcceptButton.click();
         ReusableMethods.wait(2);
         qualitydemyPage.loginButton.click();
         Assert.assertTrue(qualitydemyPage.emailBox.isDisplayed());
+        ReusableMethods.wait(2);
         Driver.closeDriver();
     }
 }

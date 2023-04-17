@@ -20,13 +20,13 @@ public class C05_POMIlkTest {
         Driver.getDriver().get("https://www.qualitydemy.com");
         //login linkine tiklayin
         QualitydemyPage qualityDemyPage=new QualitydemyPage();
-        qualityDemyPage.ilkLoginLinki.click();
+        qualityDemyPage.firstLoginLink.click();
         //dogru kullanici adi ve sifre ile giris yapin
-        qualityDemyPage.kullaniciEmailKutusu.sendKeys("anevzatcelik@gmail.com");
-        qualityDemyPage.passwordKutusu.sendKeys("Nevzat152032");
-        qualityDemyPage.loginButonu.click();
+        qualityDemyPage.emailBox.sendKeys("anevzatcelik@gmail.com");
+        qualityDemyPage.passwordBox.sendKeys("Nevzat152032");
+        qualityDemyPage.loginButton.click();
         //giris yapildigini test edin
-        Assert.assertTrue(qualityDemyPage.basariliGirisCoursesLinki.isDisplayed());
+        Assert.assertTrue(qualityDemyPage.succedEntryButton.isDisplayed());
         Driver.closeDriver();
     }
 }

@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.QualitydemyPage;
 import pages.QualitydemyPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C03_PozitifLoginTest {
     /*
@@ -15,18 +16,20 @@ public class C03_PozitifLoginTest {
    olusturarak ulasabiliriz.
     */
     @Test
-    public void test01(){
+    public void test01() throws InterruptedException {
         //qualitydemy sayfasina gidip
         Driver.getDriver().get("https://www.qualitydemy.com");
         //login linkine tiklayin
         QualitydemyPage qualityDemyPage=new QualitydemyPage();
-        qualityDemyPage.ilkLoginLinki.click();
+        qualityDemyPage.firstLoginLink.click();
         //dogru kullanici adi ve sifre ile giris yapin
-        qualityDemyPage.kullaniciEmailKutusu.sendKeys("anevzatcelik@gmail.com");
-        qualityDemyPage.passwordKutusu.sendKeys("Nevzat152032");
-        qualityDemyPage.loginButonu.click();
+        qualityDemyPage.emailBox.sendKeys("anevzatcelik@gmail.com");
+        qualityDemyPage.passwordBox.sendKeys("Nevzat152032");
+        qualityDemyPage.cookiesAcceptButton.click();
+        ReusableMethods.wait(4);
+        qualityDemyPage.loginButton.click();
         //giris yapildigini test edin
-        Assert.assertTrue(qualityDemyPage.basariliGirisCoursesLinki.isDisplayed());
+        Assert.assertTrue(qualityDemyPage.succedEntryButton.isDisplayed());
         Driver.closeDriver();
     }
 }

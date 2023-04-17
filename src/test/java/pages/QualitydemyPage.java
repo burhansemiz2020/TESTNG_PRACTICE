@@ -19,16 +19,26 @@ public class QualitydemyPage {
     }
 
     @FindBy(xpath = "//*[text()='Log in']")
-    public WebElement ilkLoginLinki;
+    public WebElement firstLoginLink;
+
     @FindBy(id="login-email")
-    public WebElement kullaniciEmailKutusu;
+    public WebElement emailBox;
+
     @FindBy(id="login-password")
-    public WebElement passwordKutusu;
-    @FindBy(xpath="//button[text()='Login']")
-    public WebElement loginButonu;
+    public WebElement passwordBox;
+
+    @FindBy(xpath="(//*[@type='submit'])[2]")
+    public WebElement loginButton;
+
     @FindBy(linkText = "My courses")
-    public WebElement basariliGirisCoursesLinki;
-    //@FindBy(xpath = "//a[text()='Accept']")
-    //public WebElement cookiesKabulButonu;
+    public WebElement succedEntryButton;
+
+    @FindBy(xpath = "//a[text()='Accept']")
+    public WebElement cookiesAcceptButton;
+
+    @FindBy(xpath="//div[@class='sign-up-form']")
+    public WebElement userEnterBlock;
+
+
 
 }
