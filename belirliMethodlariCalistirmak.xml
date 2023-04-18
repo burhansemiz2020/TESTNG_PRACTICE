@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Method calistirma">
+    <test name="Belirli metotlari calistirma">
+        <classes>
+            <class name="tests.day02.C04_NegativeLoginTest">
+                <methods>
+                    <include name="yanlisEmailTesti"></include>
+                </methods>
+            </class>
+            <class name="tests.day03.C02_NegativeLoginTesti">
+                <methods>
+                    <exclude name="yanlisEmailTesti"></exclude>
+                </methods>
+            </class>
+        </classes>
+
+        <!--burada yeni bir hiyerarsi acip yeni classlar calistiracagiz-->
+    </test>
+</suite>

@@ -56,7 +56,7 @@ public  class Driver {
 
 
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
         return driver;
     }
@@ -74,5 +74,5 @@ public  class Driver {
             driver.quit();
             driver=null;
         }
-    }
+      }
 }

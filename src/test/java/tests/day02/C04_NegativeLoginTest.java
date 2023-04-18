@@ -33,9 +33,10 @@ public class C04_NegativeLoginTest {
     }
     @Test
     public void yanlisPasswordTesti() throws InterruptedException {
-        ReusableMethods.wait(1);
-        Driver.getDriver().get("https://www.qualitydemy.com/");
         qualitydemyPage= new QualitydemyPage();
+        ReusableMethods.wait(3);
+        Driver.getDriver().get("https://www.qualitydemy.com/");
+
         qualitydemyPage.firstLoginLink.click();
         qualitydemyPage.emailBox.sendKeys("anevzatcelik@gmail.com");
         qualitydemyPage.passwordBox.sendKeys("123456");
@@ -48,9 +49,10 @@ public class C04_NegativeLoginTest {
     }
     @Test
     public void yanlisEmailYanlisPasswordTesti() throws InterruptedException {
-        ReusableMethods.wait(1);
-        Driver.getDriver().get("https://www.qualitydemy.com/");
         qualitydemyPage= new QualitydemyPage();
+        ReusableMethods.wait(3);
+        Driver.getDriver().get("https://www.qualitydemy.com/");
+
         qualitydemyPage.firstLoginLink.click();
         qualitydemyPage.emailBox.sendKeys("mehmet@abc.com");
         qualitydemyPage.passwordBox.sendKeys("123456");
