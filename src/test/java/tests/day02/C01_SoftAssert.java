@@ -10,7 +10,7 @@ import utilities.ReusableMethods;
 import java.util.Arrays;
 
 public class C01_SoftAssert {
-    @Test
+    @Test(groups = "minireg2")
      public void test01() throws InterruptedException {
         // amazon anasayfaya gidin
 

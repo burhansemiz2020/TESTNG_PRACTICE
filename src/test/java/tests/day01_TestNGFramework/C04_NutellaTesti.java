@@ -9,7 +9,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 
 public class C04_NutellaTesti {
-    @Test(groups="minireg1")
+    @Test(groups={"minireg1","minireg2","smoke"})
     public void test01() {
         //amazon ansayfaya gidin
         Driver.getDriver().get("https:www.amazon.com");
