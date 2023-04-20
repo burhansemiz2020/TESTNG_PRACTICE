@@ -9,7 +9,7 @@ import utilities.ReusableMethods;
 public class C03_SwitchingWindows {
     @Test
     public void test01(){
-        ReusableMethods.wait(2);
+        ReusableMethods.wait(4);
 
         // https://the-internet.herokuapp.com/iframe adresine gidin
         Driver.getDriver().get("https://the-internet.herokuapp.com/iframe");
