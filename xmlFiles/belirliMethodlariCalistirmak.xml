@@ -2,12 +2,12 @@
 <suite name="Method calistirma">
     <test name="Belirli metotlari calistirma">
         <classes>
-            <class name="tests.day02.C04_NegativeLoginTest">
+            <class name="tests.day02_smokeTests.C04_NegativeLoginTest">
                 <methods>
                     <include name="yanlisEmailTesti"></include>
                 </methods>
             </class>
-            <class name="tests.day03.C02_NegativeLoginTesti">
+            <class name="tests.day03_xmlFiles.C02_NegativeLoginTesti">
                 <methods>
                     <exclude name="yanlisEmailTesti"></exclude>
                 </methods>

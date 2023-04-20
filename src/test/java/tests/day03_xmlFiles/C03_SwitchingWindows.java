@@ -1,4 +1,4 @@
-package tests.day03;
+package tests.day03_xmlFiles;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;

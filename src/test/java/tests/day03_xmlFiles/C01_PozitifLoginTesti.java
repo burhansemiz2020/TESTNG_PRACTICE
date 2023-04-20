@@ -1,4 +1,4 @@
-package tests.day03;
+package tests.day03_xmlFiles;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

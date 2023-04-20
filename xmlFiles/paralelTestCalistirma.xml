@@ -2,14 +2,14 @@
 <suite name="Classlari calistirma" parallel="tests" thread-count="2">
     <test name="Istenen classlari paralel calistirma1">
         <classes>
-            <class name="tests.day02.C01_SoftAssert"></class>
-            <class name="tests.day03.C03_SwitchingWindows"></class>
+            <class name="tests.day02_smokeTests.C01_SoftAssert"></class>
+            <class name="tests.day03_xmlFiles.C03_SwitchingWindows"></class>
         </classes>
     </test>
     <test name="Istenen classlari paralel calistirma2">
         <classes>
             <class name="tests.day01_TestNGFramework.C04_NutellaTesti"></class>
-            <class name="tests.day02.C04_NegativeLoginTest"></class>
+            <class name="tests.day02_smokeTests.C04_NegativeLoginTest"></class>
         </classes>
     </test>
 </suite>

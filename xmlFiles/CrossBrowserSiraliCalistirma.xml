@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Cross Browser sirali calistirma">
+    <test name="Cross Browser ile calisacak classlar">
+      <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.day06_CrossBrowser.C01_AmazonSearch"></class>
+        </classes>
+    </test>
+    <test name="Cross Browser firefox ile calisacak classlar">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="tests.day06_CrossBrowser.C02_WiseQuarterTest"></class>
+        </classes>
+    </test>
+</suite>

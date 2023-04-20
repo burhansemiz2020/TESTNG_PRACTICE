@@ -19,7 +19,7 @@
         </groups>
         <packages>
             <package name="tests.day01_TestNGFramework"></package>
-            <package name="tests.day02"></package>
+            <package name="tests.day02_smokeTests"></package>
 
         </packages>
 

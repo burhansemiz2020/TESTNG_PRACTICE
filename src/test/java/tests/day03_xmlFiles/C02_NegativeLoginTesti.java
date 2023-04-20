@@ -1,8 +1,7 @@
-package tests.day03;
+package tests.day03_xmlFiles;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.AmazonPage;
 import pages.QualitydemyPage;
 import utilities.ConfigReader;
 import utilities.Driver;

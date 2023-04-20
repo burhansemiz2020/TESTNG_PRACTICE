@@ -2,8 +2,8 @@
 <suite name="Classlari calistirma">
    <test name="Istenen classlari calistirma">
        <classes>
-            <class name="tests.day02.C01_SoftAssert"></class>
-           <class name="tests.day03.C03_SwitchingWindows"></class>
+            <class name="tests.day02_smokeTests.C01_SoftAssert"></class>
+           <class name="tests.day03_xmlFiles.C03_SwitchingWindows"></class>
            <class name="tests.day01_TestNGFramework.C04_NutellaTesti"></class>
        </classes>
    </test>

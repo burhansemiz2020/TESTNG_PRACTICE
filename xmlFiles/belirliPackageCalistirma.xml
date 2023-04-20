@@ -2,7 +2,7 @@
 <suite name="belirli package calistirma">
     <test name="Istenen package'lari calistirma">
         <packages>
-            <package name="tests.day02"></package>
+            <package name="tests.day02_smokeTests"></package>
         </packages>
     </test>
 </suite>
